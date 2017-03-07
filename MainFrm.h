@@ -47,7 +47,9 @@ protected:
 	DECLARE_MESSAGE_MAP()
 
 public:
+	CComm m_Comm;
 	CDialDock m_serialpane;
+	void OpenComPort(bool flag);
 };
 
 

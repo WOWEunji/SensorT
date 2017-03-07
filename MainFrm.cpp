@@ -126,13 +126,15 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		}
 	}
 
-	if(!m_serialpane.Create(_T("Serial"),this,CRect(0, 0, 200, 200),TRUE, UINT(1),WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | CBRS_LEFT | CBRS_FLOAT_MULTI))
+	if(!m_serialpane.Create(_T("Serial"),this,CRect(0, 0, 200, 400),TRUE, UINT(1),WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | CBRS_LEFT | CBRS_FLOAT_MULTI))
 	{
 		return -1;
 	}
 
 	m_serialpane.EnableDocking(CBRS_ALIGN_ANY);
 	DockPane(&m_serialpane);
+
+	m_Comm.SetHwnd(this->m_hWnd);
 
 	return 0;
 }
@@ -299,3 +301,13 @@ BOOL CMainFrame::LoadFrame(UINT nIDResource, DWORD dwDefaultStyle, CWnd* pParent
 	return TRUE;
 }
 
+
+
+void CMainFrame::OpenComPort(bool flag)
+{
+	//TTYSTRUCT tty;
+	//if(flag)
+	//{
+
+	//}
+}

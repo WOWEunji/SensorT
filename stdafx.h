@@ -5,6 +5,7 @@
 
 #pragma once
 
+
 #ifndef _SECURE_ATL
 #define _SECURE_ATL 1
 #endif
@@ -36,7 +37,7 @@
 #endif // _AFX_NO_AFXCMN_SUPPORT
 
 #include <afxcontrolbars.h>     // MFC의 리본 및 컨트롤 막대 지원
-
+#include "Comm.h"
 
 
 
